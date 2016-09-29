@@ -5,3 +5,8 @@ this is a new line
 another new line
 
 NEW LINE *edited in Github*
+<<<<<<< HEAD
+=======
+
+Hi Paola!
+>>>>>>> 719aa96a76323c385f0a4cd6dfaa75686ffff865
