@@ -1,0 +1,202 @@
+html {
+  background: url(../images/book.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.social-icons {
+	font-size: 20px;
+	text-align: Center;
+	position: relative;
+	top: 67px;
+}
+
+.social-icons a {
+	color: white;
+}
+
+body{
+	font-family: Century Gothic, sans-serif;
+}
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+#navdiv{
+	opacity: 0.7;
+	filter: (opacity=70);
+}
+
+#navdiv ul{
+	width: 100%;
+	height: 80px;
+	background: #190e08;
+	line-height: 80px;
+	color: white;
+	margin-right: 15px;
+}
+
+#navdiv ul a{
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+}
+
+#navdiv ul li{
+	list-style-type: none;
+	display: inline-block;
+	float: right;
+}
+
+#navdiv ul li:hover{
+	background: #654f38;
+	transition:all 0.40s;
+}
+
+#navdiv h1{
+	width: 300px;
+	float: left;
+	cursor: pointer;
+	margin-left: 15px;
+}
+
+.prof4-box{
+	width: 50px;
+	height: 400px;
+	background: rgba(0,0,0,0.4);
+	padding: 40px;
+	color: white;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-left: 10px;
+	text-align: center;
+}
+
+.website-icons {
+	font-size: 40px;
+	margin-top: 20px;
+}
+
+.website-icons a {
+	color: white;
+}
+
+.website{
+	 font-size: 20px;
+	 text-align: left;
+	 width: 400px;
+	 margin-left: -20px;
+	 margin-top: 8px;
+}
+
+.prof5-box{
+	width: 300px;
+	height: 150px;
+	background: rgba(0,0,0,0.4);
+	padding: 10px;
+	color: white;
+	margin: 0;
+	margin-top: -450px;
+	margin-left: 230px;
+	text-align: center;
+	position: fixed;
+}
+
+#demo{
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+
+.prof6-box{
+	width: 300px;
+	height: 150px;
+	background: rgba(0,0,0,0.4);
+	padding: 10px;
+	color: white;
+	margin: 0;
+	margin-top: -450px;
+	margin-left: 600px;
+	text-align: center;
+	position: fixed;
+}
+
+#demo1{
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.prof7-box{
+	width: 300px;
+	height: 150px;
+	background: rgba(0,0,0,0.4);
+	padding: 10px;
+	color: white;
+	margin: 0;
+	margin-top: -450px;
+	margin-left: 970px;
+	text-align: center;
+	position: fixed;
+}
+
+#demo2{
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+
+.prof8-box{
+	width: 300px;
+	height: 150px;
+	background: rgba(0,0,0,0.4);
+	padding: 10px;
+	color: white;
+	margin: 0;
+	margin-top: -230px;
+	margin-left: 230px;
+	text-align: center;
+	position: fixed;
+}
+
+#demo3{
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+
+.prof9-box{
+	width: 300px;
+	height: 150px;
+	background: rgba(0,0,0,0.4);
+	padding: 10px;
+	color: white;
+	margin: 0;
+	margin-top: -230px;
+	margin-left: 600px;
+	text-align: center;
+	position: fixed;
+}
+
+#demo4{
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+
+.prof10-box{
+	width: 300px;
+	height: 150px;
+	background: rgba(0,0,0,0.4);
+	padding: 10px;
+	color: white;
+	margin: 0;
+	margin-top: -230px;
+	margin-left: 970px;
+	text-align: center;
+	position: fixed;
+}
+
+#demo5{
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
