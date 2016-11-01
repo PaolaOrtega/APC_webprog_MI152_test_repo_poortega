@@ -5,8 +5,119 @@
 </title>
 	
 <head>
-	<link rel="stylesheet" type="text/css" href="css/login.css">
+	
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	
+	<style>
+html {
+  	background: url(ferris.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.social-icons {
+	font-size: 20px;
+	text-align: Center;
+	position: relative;
+	top: 586px;
+}
+
+.social-icons a {
+	color: black;
+}
+
+body{
+	font-family: Century Gothic, sans-serif;
+}
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+#navdiv{
+	opacity: 0.7;
+	filter: (opacity=70);
+}
+
+#navdiv ul{
+	width: 100%;
+	height: 80px;
+	background: #d7cab3;
+	line-height: 80px;
+	color: gray;
+	margin-right: 15px;
+}
+
+#navdiv ul a{
+	text-decoration: none;
+	color: black;
+	padding: 20px;
+}
+
+#navdiv ul li{
+	list-style-type: none;
+	display: inline-block;
+	float: right;
+}
+
+#navdiv ul li:hover{
+	background: #f2e2c9;
+	transition:all 0.40s;
+}
+
+#navdiv h1{
+	width: 300px;
+	float: left;
+	cursor: pointer;
+	margin-left: 15px;
+}
+
+.form{
+	width: 400px;
+	height: 570px;
+	background: rgba(0,0,0,0.3);
+	padding: 10px;
+	color: white;
+	margin: 0;
+	margin-top: 15px;
+	margin-left: 110px;
+	text-align: left;
+	position: fixed;
+}
+
+#form{
+	 font-size: 18px;
+	 text-align: left;
+	 width: 400px;
+	 margin-left: 7px;
+	 margin-top: 10px;
+}
+
+.feedback{
+	font-weight: bold;
+	font-size: 23px;
+	color: #82192c;
+	margin-left: 7px;
+}
+
+.php{
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 7px;
+}
+
+h2{
+	font-family: sans serif;
+	margin-top: 5px;
+}
+
+.error{
+	color: maroon;
+}
+	</style>
 </head>
 <body>
 <div id="Maindiv">
