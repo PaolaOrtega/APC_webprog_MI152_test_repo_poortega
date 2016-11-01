@@ -1,0 +1,86 @@
+html {
+  background: url(../images/piano.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.social-icons {
+	font-size: 20px;
+	text-align: Center;
+	position: relative;
+	top: 127px;
+}
+
+.social-icons a {
+	color: white;
+}
+
+body{
+	font-family: Century Gothic, sans-serif;
+}
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+#navdiv{
+	opacity: 0.7;
+	filter: (opacity=70);
+}
+
+#navdiv ul{
+	width: 100%;
+	height: 80px;
+	background: #1f1f1f;
+	line-height: 80px;
+	color: white;
+	margin-right: 15px;
+}
+
+#navdiv ul a{
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+}
+
+#navdiv ul li{
+	list-style-type: none;
+	display: inline-block;
+	float: right;
+}
+
+#navdiv ul li:hover{
+	background: #8b8683;
+	transition:all 0.40s;
+}
+
+#navdiv h1{
+	width: 300px;
+	float: left;
+	cursor: pointer;
+	margin-left: 15px;
+}
+
+.prof2-box{
+	width: 665px;
+	height: 320px;
+	background: rgba(0,0,0,0.4);
+	padding: 40px;
+	color: white;
+	margin: 0 auto;
+	margin-top: 60px;
+	text-align: center;
+}
+
+.hobby{
+	letter-spacing: 10px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.par1{
+	margin-top: 30px;
+}
