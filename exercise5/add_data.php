@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+
 <html>
 <title>
 	Paola Ortega - Login
@@ -7,6 +7,7 @@
 <head>
 	
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css" type="text/css" />
 	
 	<style>
 html {
@@ -124,11 +125,11 @@ h2{
 	<div id="navdiv">
 		
 		<ul>
-			<h1 style="font-family:Source Sans Pro Light;"><a href="http:/mypage.php" target="_blank">Paola Ortega</h1></a></li>
-			<li><a href="http:/mypage.php" target="_blank">Home</a></li>
-			<li><a href="http:/hobbies.php" target="_blank">Hobbies</a></li>
-			<li><a href="http:/interests.php" target="_blank">Interests</a></li>
-			<li><a href="http:/trivias.php" target="_blank">Trivia</a></li>
+			<h1 style="font-family:Source Sans Pro Light;"><a href="http:/mypage.html" target="_blank">Paola Ortega</h1></a></li>
+			<li><a href="http:/mypage.html" target="_blank">Home</a></li>
+			<li><a href="http:/hobbies.html" target="_blank">Hobbies</a></li>
+			<li><a href="http:/interests.html" target="_blank">Interests</a></li>
+			<li><a href="http:/trivias.html" target="_blank">Trivia</a></li>
 			<li><a href="http:/login.php">Feedback</a></li>
 		</ul>
 	</div>
@@ -136,10 +137,40 @@ h2{
 
 <div class="form">
 	<p class="feedback">We Appreciate Your Feedback!<p>
-	<p id="form">Please enter the following: </p>
 	
-<div class="php">	
-	<?php
+<div class="php">
+<?php
+include_once 'dbconfig.php';
+if(isset($_POST['btn-save']))
+{
+ // variables for input data
+ $name = $_POST['name'];
+ $nickname = $_POST['nickname'];
+ $email = $_POST['email'];
+ $hadd = $_POST['hadd'];
+$gender = $_POST['gender']; 
+ $cpnum = $_POST['cpnum'];
+ $comment = $_POST['comment']; 
+ // sql query for inserting data into database
+ 
+        $sql_query = "INSERT INTO users(name,nickname,email,hadd,gender,cpnum,comment) VALUES('$name','$nickname','$email','$hadd','$gender','$cpnum','$comment')";
+ mysql_query($sql_query);
+        
+        // sql query for inserting data into database
+ }
+?>
+
+
+<div id="header">
+ <div id="content">
+    <label>Fill out the form.</label>
+    </div>
+</div>
+<div id="body">
+
+<p id="form">enter the following: </p>
+	
+<?php
 		// define variables and set to empty values
 		$nameErr = $nicknameErr = $emailErr = $genderErr =$cpnumErr = "";
 		$name = $nickname = $email = $hadd = $gender = $cpnum = $comment = "";
@@ -148,7 +179,7 @@ h2{
 		
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		  	if (empty($_POST["name"])) {
-				$nameErr = "Name required";
+				$nameErr = "Name is required";
 		  	} else {
 				$name = test_input($_POST["name"]);
 				// check if name only contains letters and whitespace
@@ -161,7 +192,7 @@ h2{
 			
 			
 			if(empty($_POST["nickname"])){
-		  		$nicknameErr = "Nickname required";
+		  		$nicknameErr = "Nickname is required";
 			}else{
 		  		$nickname = test_input($_POST["nickname"]);
 		  		if (!preg_match("/^[a-zA-Z ]*$/",$nickname)) {
@@ -173,7 +204,7 @@ h2{
 		  
 		  
 			if (empty($_POST["email"])) {
-			$emailErr = "Email required";
+			$emailErr = "Email is required";
 		  	} else {
 				$email = test_input($_POST["email"]);
 				// check if e-mail address is well-formed
@@ -194,7 +225,7 @@ h2{
 			
 
 		  	if (empty($_POST["gender"])) {
-				$genderErr = "Gender required";
+				$genderErr = "Gender is required";
 		  	} else {
 				$gender = test_input($_POST["gender"]);
 		  	}
@@ -202,7 +233,7 @@ h2{
 			
 
 			if (empty($_POST["cpnum"])) {
-				$cpnumErr = "Mobile number required";
+				$cpnumErr = "Mobile number is required";
 		  	} else {
 				$cpnum = test_input($_POST["cpnum"]);
 				if(!preg_match("/^[0-9]*$/",$cpnum)){
@@ -220,70 +251,64 @@ h2{
 		  	}	
 		}
 
-
+		
 	function test_input($data) {
 		$data = trim($data);
 		$data = stripslashes($data);
 		$data = htmlspecialchars($data);
 		return $data;
 			}
-			?>
+	?>
 	
 	
 			<p><span class="error">* required field.</span></p>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		
-
-			Name: <input type="text" name="name" value="<?php echo $name;?>">
+ <div id="content">
+    <form method="post">
+    <table align="center">
+    <tr>
+    <td align="center"><a href="index.php">back to display data</a></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="name" placeholder="Name" value="<?php echo $name;?>">
 			<span class="error">* <?php echo $nameErr;?></span>
-			<br><br>  
-			Nickname: <input type="text" name="nickname" value="<?php echo $nickname;?>">
-			<span class="error">* <?php echo $nicknameErr;?></span>
-			 <br><br>
-			E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-			<span class="error">* <?php echo $emailErr;?></span>
-			<br><br>
-			Home Address: <textarea name="hadd" rows ="2" cols="35"><?php echo $hadd;?></textarea>
-			<br><br>
-			Gender:  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+			<br><br> </td>
+    </tr>
+    <tr>
+    <td><input type="text" name="nickname" placeholder="Nickkame" value="<?php echo $nickname;?>">
+			<span class="error">* <?php echo $nicknameErr;?></span></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="email" placeholder="Email" value="<?php echo $email;?>">
+			<span class="error">* <?php echo $emailErr;?></span></td>
+    </tr>
+	<tr>
+    <td><textarea name="hadd" placeholder ="hadd" rows ="2" cols="30"><?php echo $hadd;?></textarea>></span></td>
+    </tr>
+
+	<tr>
+    <td><input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
 			<input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
 			<span class="error">* <?php echo $genderErr;?></span>
-			<br><br>
-			Cellphone Number: <input type="text" name="cpnum" value="<?php echo $cpnum;?>">
-			<span class="error">* <?php echo $cpnumErr;?></span>
-			<br><br>
-			Comment: <textarea name="comment" rows="3" cols="39"><?php echo $comment;?></textarea>
-			<br><br>
-			<input type="submit" name="submit" value="Submit">  
-</form>
+    </tr>
 
-	<?php
-			
-		echo "<h2>Your Input:</h2>";
-		echo $name;
-		echo "<br>";
-		echo $nickname;
-		echo "<br>";
-		echo $email;
-		echo "<br>";
-		echo $hadd;
-		echo "<br>";
-		echo $gender;
-		echo "<br>";
-		echo $cpnum;
-		echo "<br>";
-		echo $comment;
-		echo "<br>";
+	<tr>
+    <td><input type="text" name="cpnum" placeholder="Cellphone Number" value="<?php echo $cpnum;?>">
+			<span class="error">* <?php echo $cpnumErr;?></span></td>
+    </tr>
+
+	<tr>
+    <td><textarea name="comment" placeholder="Comment" rows="5" cols="40"><?php echo $comment;?></textarea></span></td>
+    </tr>
 	
-?>
-</div>
+    <tr>
+    <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
+    </tr>
+    </table>
+    </form>
+    </div>
 </div>
 
-<div class="social-icons">
-			<a href="http://www.facebook.com/paolafrancesca.ortega" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-			<a href="http://www.twitter.com/paochipaoch" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-			<a href="https://www.instagram.com/pf.ortega" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-	</div>
 </body>
-
 </html>
