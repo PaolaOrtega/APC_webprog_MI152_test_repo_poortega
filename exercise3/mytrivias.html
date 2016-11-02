@@ -9,6 +9,15 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	
 	<style>
+	
+html, body, {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
 html {
   	background: url(book.jpg) no-repeat center center fixed; 
   	-webkit-background-size: cover;
@@ -111,10 +120,9 @@ body{
 	padding: 10px;
 	color: white;
 	margin: 0;
-	margin-top: -450px;
-	margin-left: 230px;
+	margin-top: 40px;
+	margin-left: 10px;
 	text-align: center;
-	position: fixed;
 }
 
 #demo{
@@ -129,10 +137,9 @@ body{
 	padding: 10px;
 	color: white;
 	margin: 0;
-	margin-top: -450px;
-	margin-left: 600px;
+	margin-top: 40px;
+	margin-left: 10px;
 	text-align: center;
-	position: fixed;
 }
 
 #demo1{
@@ -147,10 +154,9 @@ body{
 	padding: 10px;
 	color: white;
 	margin: 0;
-	margin-top: -450px;
-	margin-left: 970px;
+	margin-top: -380px;
+	margin-left: 690px;
 	text-align: center;
-	position: fixed;
 }
 
 #demo2{
@@ -165,10 +171,9 @@ body{
 	padding: 10px;
 	color: white;
 	margin: 0;
-	margin-top: -230px;
-	margin-left: 230px;
+	margin-top: -170px;
+	margin-left: 350px;
 	text-align: center;
-	position: fixed;
 }
 
 #demo3{
@@ -183,10 +188,9 @@ body{
 	padding: 10px;
 	color: white;
 	margin: 0;
-	margin-top: -230px;
-	margin-left: 600px;
+	margin-top: 40px;
+	margin-left: 350px;
 	text-align: center;
-	position: fixed;
 }
 
 #demo4{
@@ -201,15 +205,26 @@ body{
 	padding: 10px;
 	color: white;
 	margin: 0;
-	margin-top: -230px;
-	margin-left: 970px;
+	margin-top: -170px;
+	margin-left: 690px;
 	text-align: center;
-	position: fixed;
 }
 
 #demo5{
 	margin-top: 25px;
 	margin-bottom: 40px;
+}
+
+.cover{
+	width: 1030px;
+	height: 450px;
+	background: rgba(0,0,0,0);
+	padding: 10px;
+	color: white;
+	margin: 0;
+	margin-top: -500px;
+	margin-left: 15%;
+	text-align: center;
 }
 	</style>
 </head>
@@ -223,6 +238,7 @@ body{
 			<li><a href="http:/hobbies.html" target="_blank">Hobbies</a></li>
 			<li><a href="http:/interests.html" target="_blank">Interests</a></li>
 			<li><a href="http:/trivias.html">Trivia</a></li>
+			<li><a href="http:/login.php" target="_blank">Feedback</a></li>
 		</ul>
 	</div>
 </div>
@@ -239,7 +255,7 @@ body{
 			<a href="https://www.deviantart.com/" target="_blank"><i class="fa fa-deviantart" aria-hidden="true"></i></a>
 			<a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 		</div>
-	</div>
+</div>
 
 <div class="social-icons">
 			<a href="http://www.facebook.com/paolafrancesca.ortega" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
@@ -247,6 +263,7 @@ body{
 			<a href="https://www.instagram.com/pf.ortega" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 	</div>
 	
+<div class="cover">
 <div class="prof5-box">
 	<p id="demo">One of my favorite movie<br>starring Rachel Mcdams</p>
 	
@@ -282,7 +299,7 @@ body{
 	
 	<button type="button" onclick="document.getElementById('demo5').innerHTML = 'Dusts'">ANSWER</button>
 </div>
-	
+</div>
 </body>
 
 </html>
