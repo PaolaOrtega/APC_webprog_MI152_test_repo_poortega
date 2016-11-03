@@ -1,7 +1,7 @@
 
 <html>
 <title>
-	Paola Ortega - Login
+	Paola Ortega - 
 </title>
 	
 <head>
@@ -10,6 +10,14 @@
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	
 	<style>
+html, body, {
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+		
 html {
   	background: url(ferris.jpg) no-repeat center center fixed; 
   	-webkit-background-size: cover;
@@ -78,7 +86,7 @@ body{
 
 .form{
 	width: 400px;
-	height: 570px;
+	height: 800px;
 	background: rgba(0,0,0,0.3);
 	padding: 10px;
 	color: white;
@@ -147,7 +155,7 @@ if(isset($_POST['btn-save']))
  $name = $_POST['name'];
  $nickname = $_POST['nickname'];
  $email = $_POST['email'];
- $hadd = $_POST['hadds'];
+ $hadd = $_POST['hadd'];
 $gender = $_POST['gender']; 
  $cpnum = $_POST['cpnum'];
  $comment = $_POST['comment']; 
@@ -276,7 +284,7 @@ $gender = $_POST['gender'];
 			<br><br> </td>
     </tr>
     <tr>
-    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $nickname;?>">
+    <td><input type="text" name="nickname" placeholder="Nickkame" value="<?php echo $nickname;?>">
 			<span class="error">* <?php echo $nicknameErr;?></span></td>
     </tr>
     <tr>
@@ -284,7 +292,7 @@ $gender = $_POST['gender'];
 			<span class="error">* <?php echo $emailErr;?></span></td>
     </tr>
 	<tr>
-    <td><textarea name="hadd" placeholder ="home address" rows ="2" cols="30"><?php echo $hadd;?></textarea>></span></td>
+    <td><textarea name="hadd" placeholder ="hadd" rows ="2" cols="30"><?php echo $hadd;?></textarea>></span></td>
     </tr>
 
 	<tr>
@@ -299,7 +307,7 @@ $gender = $_POST['gender'];
     </tr>
 
 	<tr>
-    <td><textarea name="comment" placeholder="Comment" rows="3" cols="40"><?php echo $comment;?></textarea></span></td>
+    <td><textarea name="comment" placeholder="Comment" rows="5" cols="40"><?php echo $comment;?></textarea></span></td>
     </tr>
 	
     <tr>
