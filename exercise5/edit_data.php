@@ -135,14 +135,14 @@ if(isset($_POST['btn-update']))
 	$name = $_POST['name'];
 	$nickname = $_POST['nickname'];
 	$email = $_POST['email'];
-	$hadd = $_POST['home address'];
+	$hadd = $_POST['hadd'];
 	$gender = $_POST['gender']; 
-	$cpnum = $_POST['cellphone number'];
+	$cpnum = $_POST['cpnum'];
 	$comment = $_POST['comment']; 
  // variables for input data
  
  // sql query for update data into database
- $sql_query = "UPDATE users SET name='$name', nickname='$nickname',email='$email',home address='$hadd',gender='$gender',cellphone number='$cpnum',comment='$comment' WHERE user_id=".$_GET['edit_id'];   
+ $sql_query = "UPDATE users SET name='$name', nickname='$nickname',email='$email',hadd='$hadd',gender='$gender',cpnum='$cpnum',comment='$comment' WHERE user_id=".$_GET['edit_id'];   
  // sql query for update data into database 
  
 // sql query execution function
@@ -208,7 +208,7 @@ if(isset($_POST['btn-cancel']))
     <td><input type="text" name="email" placeholder="Email" value="<?php echo $fetched_row['email'];?>" required></td>
     </tr>
 	<tr>
-    <td><textarea name="hadd" placeholder ="home address" rows ="3" cols="30"><?php echo $fetched_row['home address'];?></textarea></td>
+    <td><textarea name="hadd" placeholder ="Home Address" rows ="3" cols="30"><?php echo $fetched_row['hadd'];?></textarea></td>
     </tr>
 	<tr>
     <td><input type="radio" name="gender"  <?php if (isset($gender) && $gender=="female") echo $fetched_row['gender']; ?> value="female">Female
@@ -216,7 +216,7 @@ if(isset($_POST['btn-cancel']))
 	</td>
     </tr>
 	<tr>
-    <td><input type="text" name="cpnum" placeholder="Cellphone Number" value="<?php echo $fetched_row['cellphone number'];?>"required></td>
+    <td><input type="text" name="cpnum" placeholder="Cellphone Number" value="<?php echo $fetched_row['cpnum'];?>"required></td>
     </tr>
 	<tr>
     <td><textarea name="comment" placeholder="Comment" rows="5" cols="40"><?php echo $fetched_row['comment'];?></textarea></td>
