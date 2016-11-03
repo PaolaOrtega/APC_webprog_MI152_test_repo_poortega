@@ -284,7 +284,7 @@ $gender = $_POST['gender'];
 			<br><br> </td>
     </tr>
     <tr>
-    <td><input type="text" name="nickname" placeholder="Nickkame" value="<?php echo $nickname;?>">
+    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $nickname;?>">
 			<span class="error">* <?php echo $nicknameErr;?></span></td>
     </tr>
     <tr>
