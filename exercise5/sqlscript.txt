@@ -1,5 +1,5 @@
-CREATE DATABASE `form` ;
-CREATE TABLE `form`.`users` (
+CREATE DATABASE `feedback` ;
+CREATE TABLE `feedback`.`users` (
 `user_id` INT( 10 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `name` VARCHAR( 45 ) NOT NULL ,
 `nickname` VARCHAR( 25 ) NOT NULL ,
