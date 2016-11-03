@@ -147,13 +147,13 @@ if(isset($_POST['btn-save']))
  $name = $_POST['name'];
  $nickname = $_POST['nickname'];
  $email = $_POST['email'];
- $hadd = $_POST['home address'];
+ $hadd = $_POST['hadds'];
 $gender = $_POST['gender']; 
- $cpnum = $_POST['cellphone number'];
+ $cpnum = $_POST['cpnum'];
  $comment = $_POST['comment']; 
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(name,nickname,email,home address,gender,cellphone number,comment) VALUES('$name','$nickname','$email','$hadd','$gender','$cpnum','$comment')";
+        $sql_query = "INSERT INTO users(name,nickname,email,hadd,gender,cpnum,comment) VALUES('$name','$nickname','$email','$hadd','$gender','$cpnum','$comment')";
  mysql_query($sql_query);
         
         // sql query for inserting data into database
@@ -216,10 +216,10 @@ $gender = $_POST['gender'];
 
 			
 			
-			if(empty($_POST["home address"])){
+			if(empty($_POST["hadd"])){
 			  	$hadd = "";
 			}else{
-			  	$hadd = test_input($_POST["home address"]);
+			  	$hadd = test_input($_POST["hadd"]);
 			}
 
 			
@@ -232,10 +232,10 @@ $gender = $_POST['gender'];
 			
 			
 
-			if (empty($_POST["cellphone number"])) {
+			if (empty($_POST["cpnum"])) {
 				$cpnumErr = "Mobile number is required";
 		  	} else {
-				$cpnum = test_input($_POST["cellphone number"]);
+				$cpnum = test_input($_POST["cpnum"]);
 				if(!preg_match("/^[0-9]*$/",$cpnum)){
 					$cpnumErr = "Only numbers are allowed";
 					$cpnum = "";
@@ -284,7 +284,7 @@ $gender = $_POST['gender'];
 			<span class="error">* <?php echo $emailErr;?></span></td>
     </tr>
 	<tr>
-    <td><textarea name="home address" placeholder ="home address" rows ="2" cols="30"><?php echo $hadd;?></textarea>></span></td>
+    <td><textarea name="hadd" placeholder ="home address" rows ="2" cols="30"><?php echo $hadd;?></textarea>></span></td>
     </tr>
 
 	<tr>
@@ -294,7 +294,7 @@ $gender = $_POST['gender'];
     </tr>
 
 	<tr>
-    <td><input type="text" name="cellphone number" placeholder="Cellphone Number" value="<?php echo $cpnum;?>">
+    <td><input type="text" name="cpnum" placeholder="Cellphone Number" value="<?php echo $cpnum;?>">
 			<span class="error">* <?php echo $cpnumErr;?></span></td>
     </tr>
 
