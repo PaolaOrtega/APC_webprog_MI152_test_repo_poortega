@@ -1,4 +1,3 @@
-
 <html>
 <title>
 	Paola Ortega - Login
@@ -118,6 +117,21 @@ h2{
 .error{
 	color: maroon;
 }
+
+#eto{
+	width: 1100px;
+	height: 1000px;
+	background: rgba(0,0,0,0.1);
+	padding: 5px;
+	color: black;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family:comic sans ms;
+	font-size:25px;
+	vertical-align:baseline;
+	}
+	
 	</style>
 </head>
 <body>
@@ -125,29 +139,28 @@ h2{
 	<div id="navdiv">
 		
 		<ul>
-			<h1 style="font-family:Source Sans Pro Light;"><a href="http:/mypage.php" target="_blank">Paola Ortega</h1></a></li>
-			<li><a href="http:/mypage.php" target="_blank">Home</a></li>
-			<li><a href="http:/hobbies.php" target="_blank">Hobbies</a></li>
-			<li><a href="http:/interests.php" target="_blank">Interests</a></li>
-			<li><a href="http:/trivias.php" target="_blank">Trivia</a></li>
-			<li><a href="http:/login.php">Feedback</a></li>
+			<h1 style="font-family:Source Sans Pro Light;"><a href="mypage.php">Paola Ortega</h1></a></li>
+			<li><a href="mypage.php">Home</a></li>
+			<li><a href="hobbies.php">Hobbies</a></li>
+			<li><a href="interests.php">Interests</a></li>
+			<li><a href="trivias.php">Trivia</a></li>
+			<li><a href="login.php">Feedback</a></li>
 		</ul>
 	</div>
 </div>
 
-<div class="form">
-	<p class="feedback">We Appreciate Your Feedback!<p>
-	<p id="form">Please enter the following: </p>
+<div id="cover">
+<center>
+<h1>Data</h1>
+<label>enter data here!</label>
 	
-<div class="php">
 <?php
 include_once 'dbconfig.php';
-
 //delete condition
 if(isset($_GET['delete_id']))
 {
  $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
- mysql_query($sql_query);
+ mysqli_query($link, $sql_query);
  header("Location: $_SERVER[PHP_SELF]");
 }
 //delete condition
@@ -156,7 +169,7 @@ if(isset($_GET['delete_id']))
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Feedback</title>
+<title>Form</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript">
 function edt_id(id)
@@ -197,8 +210,8 @@ function delete_id(id)
     </tr>
     <?php
  $sql_query="SELECT * FROM users";
- $result_set=mysql_query($sql_query);
- while($row=mysql_fetch_row($result_set))
+ $result_set=mysqli_query($link, $sql_query);
+ while($row=mysqli_fetch_row($result_set))
  {
   ?>
         <tr>
@@ -217,5 +230,8 @@ function delete_id(id)
  ?>
     </table>
     </div>
+</div>
+
+</center>
 </body>
 </html>

@@ -118,16 +118,31 @@ h2{
 .error{
 	color: maroon;
 }
+
+#eto{
+	width: 1000px;
+	height: 1000px;
+	background: rgba(0,0,0,0.1);
+	padding: 5px;
+	color: black;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family:comic sans ms;
+	font-size:25px;
+	vertical-align:baseline;
+	}
+
 </style>
 
-<div class="php">
+<center>
 <?php
 include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
  $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
- $result_set=mysql_query($sql_query);
- $fetched_row=mysql_fetch_array($result_set);
+ $result_set=mysqli_query($link, $sql_query);
+ $fetched_row=mysqli_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
 {
@@ -146,7 +161,7 @@ if(isset($_POST['btn-update']))
  // sql query for update data into database 
  
 // sql query execution function
- if(mysql_query($sql_query))
+ if(mysqli_query($link, $sql_query))
  {
   ?>
   <script type="text/javascript">
@@ -171,28 +186,36 @@ if(isset($_POST['btn-cancel']))
  header("Location: index.php");
 }
 ?>
+
 </head>
+</center>
 <body>
 <div id="Maindiv">
 	<div id="navdiv">
 		
 		<ul>
-			<h1 style="font-family:Source Sans Pro Light;"><a href="http:/mypage.php" target="_blank">Paola Ortega</h1></a></li>
-			<li><a href="http:/mypage.php" target="_blank">Home</a></li>
-			<li><a href="http:/hobbies.php" target="_blank">Hobbies</a></li>
-			<li><a href="http:/interests.php" target="_blank">Interests</a></li>
-			<li><a href="http:/trivias.php" target="_blank">Trivia</a></li>
-			<li><a href="http:/login.php">Feedback</a></li>
+			<h1 style="font-family:Source Sans Pro Light;"><a href="mypage.php">Paola Ortega</h1></a></li>
+			<li><a href="mypage.php">Home</a></li>
+			<li><a href="hobbies.php">Hobbies</a></li>
+			<li><a href="interests.php">Interests</a></li>
+			<li><a href="trivias.php">Trivia</a></li>
+			<li><a href="login.php">Feedback</a></li>
 		</ul>
 	</div>
 </div>
 
-<div class="form">
-	<p class="feedback">We Appreciate Your Feedback!<p>
+<center>
+	</br>
+</br>
+</br>
+</br>
+<center>
+<div id="cover">
+<h1>Form</h1>
 
 <div id="header">
  <div id="content">
-    <label>Fill out the form.</label>
+    <label>Please fill out the form.</label>
     </div>
 	<div id="body">		
 	<div id="content">
@@ -208,7 +231,7 @@ if(isset($_POST['btn-cancel']))
     <td><input type="text" name="email" placeholder="Email" value="<?php echo $fetched_row['email'];?>" required></td>
     </tr>
 	<tr>
-    <td><textarea name="hadd" placeholder ="Home Address" rows ="3" cols="30"><?php echo $fetched_row['hadd'];?></textarea></td>
+    <td><textarea name="hadd" placeholder ="home address" rows ="3" cols="30"><?php echo $fetched_row['hadd'];?></textarea></td>
     </tr>
 	<tr>
     <td><input type="radio" name="gender"  <?php if (isset($gender) && $gender=="female") echo $fetched_row['gender']; ?> value="female">Female
@@ -227,8 +250,11 @@ if(isset($_POST['btn-cancel']))
     <button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
     </td>
     </tr>
-	</table>
+	 </table>
     </form>
     </div>
-	</body>
+</div>
+
+</center>
+</body>
 </html>

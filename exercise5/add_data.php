@@ -126,6 +126,21 @@ h2{
 .error{
 	color: maroon;
 }
+
+#cover{
+	width: 1000px;
+	height: 1200px;
+	background: rgba(0,0,0,0.1);
+	padding: 5px;
+	color: black;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size:20px;
+	vertical-align:baseline;
+	}
+	
+
 	</style>
 </head>
 <body>
@@ -133,20 +148,20 @@ h2{
 	<div id="navdiv">
 		
 		<ul>
-			<h1 style="font-family:Source Sans Pro Light;"><a href="http:/mypage.html" target="_blank">Paola Ortega</h1></a></li>
-			<li><a href="http:/mypage.html" target="_blank">Home</a></li>
-			<li><a href="http:/hobbies.html" target="_blank">Hobbies</a></li>
-			<li><a href="http:/interests.html" target="_blank">Interests</a></li>
-			<li><a href="http:/trivias.html" target="_blank">Trivia</a></li>
-			<li><a href="http:/login.php">Feedback</a></li>
+			<h1 style="font-family:Source Sans Pro Light;"><a href="mypage.html">Paola Ortega</h1></a></li>
+			<li><a href="mypage.html">Home</a></li>
+			<li><a href="hobbies.html">Hobbies</a></li>
+			<li><a href="interests.html">Interests</a></li>
+			<li><a href="trivias.html">Trivia</a></li>
+			<li><a href="login.php">Feedback</a></li>
 		</ul>
 	</div>
 </div>
 
-<div class="form">
-	<p class="feedback">We Appreciate Your Feedback!<p>
-	
-<div class="php">
+<div id="cover">
+<center>
+<h1>Form</h1>
+
 <?php
 include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
@@ -156,27 +171,27 @@ if(isset($_POST['btn-save']))
  $nickname = $_POST['nickname'];
  $email = $_POST['email'];
  $hadd = $_POST['hadd'];
-$gender = $_POST['gender']; 
+ $gender = $_POST['gender']; 
  $cpnum = $_POST['cpnum'];
  $comment = $_POST['comment']; 
  // sql query for inserting data into database
  
         $sql_query = "INSERT INTO users(name,nickname,email,hadd,gender,cpnum,comment) VALUES('$name','$nickname','$email','$hadd','$gender','$cpnum','$comment')";
- mysql_query($sql_query);
+ mysqli_query($link, $sql_query);
         
         // sql query for inserting data into database
  }
 ?>
-
+<center>
 
 <div id="header">
  <div id="content">
-    <label>Fill out the form.</label>
+    <label>Please fill out the form.</label>
     </div>
 </div>
 <div id="body">
 
-<p id="form">enter the following: </p>
+<p id="form"><center>enter the following details: </center></p>
 	
 <?php
 		// define variables and set to empty values
@@ -196,7 +211,6 @@ $gender = $_POST['gender'];
 					$name = "";
 				}
 		  	}
-
 			
 			
 			if(empty($_POST["nickname"])){
@@ -221,7 +235,6 @@ $gender = $_POST['gender'];
 			  	$email = "";
 				}
 		  	}
-
 			
 			
 			if(empty($_POST["hadd"])){
@@ -229,9 +242,7 @@ $gender = $_POST['gender'];
 			}else{
 			  	$hadd = test_input($_POST["hadd"]);
 			}
-
 			
-
 		  	if (empty($_POST["gender"])) {
 				$genderErr = "Gender is required";
 		  	} else {
@@ -239,7 +250,6 @@ $gender = $_POST['gender'];
 		  	}
 			
 			
-
 			if (empty($_POST["cpnum"])) {
 				$cpnumErr = "Mobile number is required";
 		  	} else {
@@ -258,7 +268,6 @@ $gender = $_POST['gender'];
 				$comment = test_input($_POST["comment"]);
 		  	}	
 		}
-
 		
 	function test_input($data) {
 		$data = trim($data);
@@ -269,14 +278,15 @@ $gender = $_POST['gender'];
 	?>
 	
 	
-			<p><span class="error">* required field.</span></p>
+			<p><span class="error">* required field.
+			<u><strong>* Don't forget to save and cick the Display data below </u></strong></span></p>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		
  <div id="content">
     <form method="post">
     <table align="center">
     <tr>
-    <td align="center"><a href="index.php">back to display data</a></td>
+   
     </tr>
     <tr>
     <td><input type="text" name="name" placeholder="Name" value="<?php echo $name;?>">
@@ -284,7 +294,7 @@ $gender = $_POST['gender'];
 			<br><br> </td>
     </tr>
     <tr>
-    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $nickname;?>">
+    <td><input type="text" name="nickname" placeholder="Nick name" value="<?php echo $nickname;?>">
 			<span class="error">* <?php echo $nicknameErr;?></span></td>
     </tr>
     <tr>
@@ -292,7 +302,7 @@ $gender = $_POST['gender'];
 			<span class="error">* <?php echo $emailErr;?></span></td>
     </tr>
 	<tr>
-    <td><textarea name="hadd" placeholder ="hadd" rows ="2" cols="30"><?php echo $hadd;?></textarea>></span></td>
+    <td><textarea name="hadd" placeholder ="home address" rows ="3" cols="102"><?php echo $hadd;?></textarea>></span></td>
     </tr>
 
 	<tr>
@@ -307,16 +317,17 @@ $gender = $_POST['gender'];
     </tr>
 
 	<tr>
-    <td><textarea name="comment" placeholder="Comment" rows="5" cols="40"><?php echo $comment;?></textarea></span></td>
+    <td><textarea name="comment" placeholder="Comment" rows="5" cols="102"><?php echo $comment;?></textarea></span></td>
     </tr>
 	
     <tr>
-    <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
+    <td><button type="submit" name="btn-save" onclick="location.href='index.php';"><strong>SAVE</strong></button>
+	<button type="button" onclick="location.href='index.php';"><strong>DISPLAY DATA</strong></button></td>
     </tr>
     </table>
     </form>
     </div>
 </div>
 
+</center>
 </body>
-</html>
