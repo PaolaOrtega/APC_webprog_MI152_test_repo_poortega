@@ -233,12 +233,12 @@ body{
 	<div id="navdiv">
 		
 		<ul>
-			<h1 style="font-family:Source Sans Pro Light;"><a href="http:/mypage.php" target="_blank">Paola Ortega</h1></a></li>
-			<li><a href="http:/mypage.php" target="_blank">Home</a></li>
-			<li><a href="http:/hobbies.php" target="_blank">Hobbies</a></li>
-			<li><a href="http:/interests.php" target="_blank">Interests</a></li>
-			<li><a href="http:/trivias.php">Trivia</a></li>
-			<li><a href="http:/login.php" target="_blank">Feedback</a></li>
+			<h1 style="font-family:Source Sans Pro Light;"><a href="mypage.php">Paola Ortega</h1></a></li>
+			<li><a href="mypage.php">Home</a></li>
+			<li><a href="hobbies.php">Hobbies</a></li>
+			<li><a href="interests.php">Interests</a></li>
+			<li><a href="trivias.php">Trivia</a></li>
+			<li><a href="login.php">Feedback</a></li>
 		</ul>
 	</div>
 </div>
