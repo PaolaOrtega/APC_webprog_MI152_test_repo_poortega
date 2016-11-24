@@ -63,7 +63,7 @@ p {
 		<p style= "font-family:Source Sans Pro Light;"><font size="6"> PAOLA ORTEGA </p></font>
 		<hr width="75%" color="white">
 		<p style="font-family:Source Sans Pro Semibold;"><font size="3"> Asia Pacific College</p></font>
-		<p style-"font-family:Source Sans Pro;"><font size="2"> BS CS-SS | pfortega@outlook.com</p></font>
+		<p style="font-family:Source Sans Pro;"><font size="2"> BS CS-SS | pfortega@outlook.com</p></font>
 		</center>
 		
 		<div class="social-icons">
@@ -74,7 +74,7 @@ p {
 	</div>
 	
 	<div class="anchor-icon">
-		<a href="http:/information.php" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+		<a href="information.php"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
 	</div>
 </body>
 
