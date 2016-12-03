@@ -200,7 +200,7 @@ function delete_id(id)
     <th colspan="9"><a href="add_data.php">add data here.</a></th>
     </tr>
     <th>Name</th>
-    <th>Nick Name</th>
+    <th>Nickname</th>
     <th>Email</th>
 	<th>Home Address</th>
 	<th>Gender</th>
