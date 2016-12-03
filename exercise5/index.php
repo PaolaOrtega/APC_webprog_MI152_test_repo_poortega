@@ -4,11 +4,20 @@
 </title>
 	
 <head>
-	
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css" type="text/css" />
-	
+
 	<style>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+
+	
+html, body, {
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+	
 html {
   	background: url(ferris.jpg) no-repeat center center fixed; 
   	-webkit-background-size: cover;
@@ -118,19 +127,18 @@ h2{
 	color: maroon;
 }
 
-#eto{
-	width: 1100px;
-	height: 1000px;
-	background: rgba(0,0,0,0.1);
-	padding: 5px;
-	color: black;
-	margin: auto;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	font-family:comic sans ms;
-	font-size:25px;
-	vertical-align:baseline;
-	}
+.data{
+	font-weight: bold;
+	font-size: 40px;
+	color: #82192c;
+	margin-left: 7px;
+	margin-top: 80px;
+}
+
+label{
+	margin-left: 7px;
+	font-size: 20px;
+}
 	
 	</style>
 </head>
@@ -151,8 +159,8 @@ h2{
 
 <div id="cover">
 <center>
-<h1>Data</h1>
-<label>enter data here!</label>
+<p class="data">DATA</p>
+<label>Enter data here!</label>
 	
 <?php
 include_once 'dbconfig.php';
@@ -165,7 +173,6 @@ if(isset($_GET['delete_id']))
 }
 //delete condition
 ?>
-
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -188,7 +195,7 @@ function delete_id(id)
 }
 </script>
 </head>
-<body>
+
 <center>
 
 
@@ -197,7 +204,7 @@ function delete_id(id)
  
     <table align="center">
     <tr>
-    <th colspan="9"><a href="add_data.php">add data here.</a></th>
+    <th colspan="9"><a href="add_data.php">Add Data Here</a></th>
     </tr>
     <th>Name</th>
     <th>Nickname</th>

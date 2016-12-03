@@ -7,9 +7,18 @@
 <head>
 	
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css" type="text/css" />
 	
 	<style>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+		
+html, body, {
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+		
 html {
   	background: url(ferris.jpg) no-repeat center center fixed; 
   	-webkit-background-size: cover;
@@ -76,19 +85,6 @@ body{
 	margin-left: 15px;
 }
 
-.form{
-	width: 400px;
-	height: 570px;
-	background: rgba(0,0,0,0.3);
-	padding: 10px;
-	color: white;
-	margin: 0;
-	margin-top: 15px;
-	margin-left: 110px;
-	text-align: left;
-	position: fixed;
-}
-
 #form{
 	 font-size: 18px;
 	 text-align: left;
@@ -105,7 +101,7 @@ body{
 }
 
 .php{
-	font-size: 14px;
+	font-size: 15px;
 	margin-top: 10px;
 	margin-left: 7px;
 }
@@ -119,23 +115,39 @@ h2{
 	color: maroon;
 }
 
-#eto{
-	width: 1000px;
-	height: 1000px;
-	background: rgba(0,0,0,0.1);
-	padding: 5px;
-	color: black;
-	margin: auto;
+label{
+	font-size: 15px;
+}
+
+#cover{
+	width: 390px;
+	height: 370px;
+	background: rgba(0,0,0,0.3);
+	padding: 10px;
+	color: white;
+	margin: 0;
 	margin-top: 5px;
-	margin-bottom: 5px;
-	font-family:comic sans ms;
-	font-size:25px;
-	vertical-align:baseline;
+	margin-left: 110px;
+	text-align: left;
+	position: fixed;
 	}
+	
+.h1{
+	font-weight: bold;
+	font-size: 23px;
+	color: #82192c;
+	margin-left: 7px;
+}
+
+#header{
+	font-size: 15px;
+	margin-left: 7px;
+}
 
 </style>
 
 <center>
+
 <?php
 include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
@@ -211,12 +223,14 @@ if(isset($_POST['btn-cancel']))
 </br>
 <center>
 <div id="cover">
-<h1>Form</h1>
+<p class="h1">Form</p>
+<br>
 
 <div id="header">
  <div id="content">
-    <label>Please fill out the form.</label>
+    <label>Please update the form.</label>
     </div>
+	<br>
 	<div id="body">		
 	<div id="content">
     <form method="post">
@@ -231,7 +245,7 @@ if(isset($_POST['btn-cancel']))
     <td><input type="text" name="email" placeholder="Email" value="<?php echo $fetched_row['email'];?>" required></td>
     </tr>
 	<tr>
-    <td><textarea name="hadd" placeholder ="home address" rows ="3" cols="30"><?php echo $fetched_row['hadd'];?></textarea></td>
+    <td><textarea name="hadd" placeholder ="home address" rows ="3" cols="50"><?php echo $fetched_row['hadd'];?></textarea></td>
     </tr>
 	<tr>
     <td><input type="radio" name="gender"  <?php if (isset($gender) && $gender=="female") echo $fetched_row['gender']; ?> value="female">Female
@@ -242,7 +256,7 @@ if(isset($_POST['btn-cancel']))
     <td><input type="text" name="cpnum" placeholder="Cellphone Number" value="<?php echo $fetched_row['cpnum'];?>"required></td>
     </tr>
 	<tr>
-    <td><textarea name="comment" placeholder="Comment" rows="5" cols="40"><?php echo $fetched_row['comment'];?></textarea></td>
+    <td><textarea name="comment" placeholder="Comment" rows="5" cols="50"><?php echo $fetched_row['comment'];?></textarea></td>
     </tr>
 	<tr>
     <td>
