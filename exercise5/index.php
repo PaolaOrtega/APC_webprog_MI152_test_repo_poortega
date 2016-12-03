@@ -17,14 +17,6 @@ html, body, {
 	left:0;
 	right:0;
 }
-	
-html {
-  	background: url(ferris.jpg) no-repeat center center fixed; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-}
 
 .social-icons {
 	font-size: 20px;
@@ -132,7 +124,7 @@ h2{
 	font-size: 40px;
 	color: #82192c;
 	margin-left: 7px;
-	margin-top: 80px;
+	margin-top: 50px;
 }
 
 label{
@@ -152,7 +144,7 @@ label{
 			<li><a href="hobbies.php">Hobbies</a></li>
 			<li><a href="interests.php">Interests</a></li>
 			<li><a href="trivias.php">Trivia</a></li>
-			<li><a href="add_data.php">Feedback</a></li>
+			<li><a href="login.php">Feedback</a></li>
 		</ul>
 	</div>
 </div>
