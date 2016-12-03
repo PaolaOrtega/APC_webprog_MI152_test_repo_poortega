@@ -191,7 +191,7 @@ if(isset($_POST['btn-save']))
 </div>
 <div id="body">
 
-<p id="form"><center>enter the following details: </center></p>
+<p id="form"><center>Enter the following details: </center></p>
 	
 <?php
 		// define variables and set to empty values
@@ -279,7 +279,7 @@ if(isset($_POST['btn-save']))
 	
 	
 			<p><span class="error">* required field.
-			<u><strong>* Don't forget to save and click the Display data below </u></strong></span></p>
+			<u>* Don't forget to save and click the <strong>"Display Data"</strong> below </u></span></p>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		
  <div id="content">
