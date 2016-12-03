@@ -279,7 +279,7 @@ if(isset($_POST['btn-save']))
 	
 	
 			<p><span class="error">* required field.
-			<u>* Don't forget to save and click the <strong>"Display Data"</strong> below </u></span></p>
+			<u>Don't forget to save and click the <strong>"Display Data"</strong> below </u></span></p>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		
  <div id="content">
