@@ -211,7 +211,7 @@ if(isset($_POST['btn-cancel']))
 			<li><a href="hobbies.php">Hobbies</a></li>
 			<li><a href="interests.php">Interests</a></li>
 			<li><a href="trivias.php">Trivia</a></li>
-			<li><a href="login.php">Feedback</a></li>
+			<li><a href="add_data.php">Feedback</a></li>
 		</ul>
 	</div>
 </div>
