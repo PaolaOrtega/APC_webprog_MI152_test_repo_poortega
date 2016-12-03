@@ -5,11 +5,11 @@
 </title>
 	
 <head>
-	
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<style>
+	
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	
-	<style>
 html, body, {
 	position:fixed;
 	top:0;
@@ -35,6 +35,13 @@ html {
 
 .social-icons a {
 	color: black;
+}
+
+.h1{
+	font-weight: bold;
+	font-size: 23px;
+	color: #82192c;
+	margin-left: 7px;
 }
 
 body{
@@ -97,14 +104,6 @@ body{
 	position: fixed;
 }
 
-#form{
-	 font-size: 18px;
-	 text-align: left;
-	 width: 400px;
-	 margin-left: 7px;
-	 margin-top: 10px;
-}
-
 .feedback{
 	font-weight: bold;
 	font-size: 23px;
@@ -113,7 +112,7 @@ body{
 }
 
 .php{
-	font-size: 14px;
+	font-size: 15px;
 	margin-top: 10px;
 	margin-left: 7px;
 }
@@ -128,17 +127,28 @@ h2{
 }
 
 #cover{
-	width: 1000px;
-	height: 1200px;
-	background: rgba(0,0,0,0.1);
-	padding: 5px;
-	color: black;
-	margin: auto;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	font-size:20px;
-	vertical-align:baseline;
+	width: 390px;
+	height: 450px;
+	background: rgba(0,0,0,0.3);
+	padding: 10px;
+	color: white;
+	margin: 0;
+	margin-top: 45px;
+	margin-left: 110px;
+	text-align: left;
+	position: fixed;
 	}
+	
+.php{
+	font-size: 15px;
+	margin-top: 10px;
+	margin-left: 7px;
+}
+
+label{
+	margin-left: 7px;
+	font-size: 15px;
+}
 	
 
 	</style>
@@ -159,8 +169,8 @@ h2{
 </div>
 
 <div id="cover">
-<center>
-<h1>Form</h1>
+
+<p class="h1">Form</p>
 
 <?php
 include_once 'dbconfig.php';
@@ -182,17 +192,16 @@ if(isset($_POST['btn-save']))
         // sql query for inserting data into database
  }
 ?>
-<center>
 
+<br>
 <div id="header">
  <div id="content">
     <label>Please fill out the form.</label>
     </div>
 </div>
 <div id="body">
-
-<p id="form"><center>Enter the following details: </center></p>
 	
+<div class="php">
 <?php
 		// define variables and set to empty values
 		$nameErr = $nicknameErr = $emailErr = $genderErr =$cpnumErr = "";
@@ -282,6 +291,8 @@ if(isset($_POST['btn-save']))
 			<u>Don't forget to save and click the <strong>"Display Data"</strong> below </u></span></p>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		
+		<br>
+		
  <div id="content">
     <form method="post">
     <table align="center">
@@ -302,7 +313,7 @@ if(isset($_POST['btn-save']))
 			<span class="error">* <?php echo $emailErr;?></span></td>
     </tr>
 	<tr>
-    <td><textarea name="hadd" placeholder ="home address" rows ="3" cols="102"><?php echo $hadd;?></textarea>></span></td>
+    <td><textarea name="hadd" placeholder ="home address" rows ="3" cols="50"><?php echo $hadd;?></textarea></span></td>
     </tr>
 
 	<tr>
@@ -317,7 +328,7 @@ if(isset($_POST['btn-save']))
     </tr>
 
 	<tr>
-    <td><textarea name="comment" placeholder="Comment" rows="5" cols="102"><?php echo $comment;?></textarea></span></td>
+    <td><textarea name="comment" placeholder="Comment" rows="5" cols="50"><?php echo $comment;?></textarea></span></td>
     </tr>
 	
     <tr>
@@ -330,4 +341,11 @@ if(isset($_POST['btn-save']))
 </div>
 
 </center>
+
+<div class="social-icons">
+			<a href="http://www.facebook.com/paolafrancesca.ortega" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+			<a href="http://www.twitter.com/paochipaoch" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+			<a href="https://www.instagram.com/pf.ortega" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+	</div>
 </body>
+</html>
