@@ -279,7 +279,7 @@ if(isset($_POST['btn-save']))
 	
 	
 			<p><span class="error">* required field.
-			<u><strong>* Don't forget to save and cick the Display data below </u></strong></span></p>
+			<u><strong>* Don't forget to save and click the Display data below </u></strong></span></p>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		
  <div id="content">
@@ -294,7 +294,7 @@ if(isset($_POST['btn-save']))
 			<br><br> </td>
     </tr>
     <tr>
-    <td><input type="text" name="nickname" placeholder="Nick name" value="<?php echo $nickname;?>">
+    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $nickname;?>">
 			<span class="error">* <?php echo $nicknameErr;?></span></td>
     </tr>
     <tr>
