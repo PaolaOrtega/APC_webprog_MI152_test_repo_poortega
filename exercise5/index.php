@@ -205,7 +205,7 @@ function delete_id(id)
 	<th>Home Address</th>
 	<th>Gender</th>
 	<th>Cell Phone</th>
-	<th>comments:</th>
+	<th>Comments:</th>
     <th colspan="2">Operations</th>
     </tr>
     <?php
