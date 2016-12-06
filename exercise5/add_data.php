@@ -128,7 +128,7 @@ h2{
 
 #cover{
 	width: 390px;
-	height: 450px;
+	height: 440px;
 	background: rgba(0,0,0,0.3);
 	padding: 10px;
 	color: white;
@@ -301,7 +301,7 @@ if(isset($_POST['btn-save']))
     <tr>
     <td><input type="text" name="name" placeholder="Name" value="<?php echo $name;?>">
 			<span class="error">* <?php echo $nameErr;?></span>
-			<br><br> </td>
+			</br></td>
     </tr>
     <tr>
     <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $nickname;?>">
@@ -312,7 +312,7 @@ if(isset($_POST['btn-save']))
 			<span class="error">* <?php echo $emailErr;?></span></td>
     </tr>
 	<tr>
-    <td><textarea name="hadd" placeholder ="home address" rows ="3" cols="50"><?php echo $hadd;?></textarea></span></td>
+    <td><textarea name="hadd" placeholder ="Home Address" rows ="3" cols="50"><?php echo $hadd;?></textarea></span></td>
     </tr>
 
 	<tr>
