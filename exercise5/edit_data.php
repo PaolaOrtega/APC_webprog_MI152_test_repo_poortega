@@ -245,7 +245,7 @@ if(isset($_POST['btn-cancel']))
     <td><input type="text" name="email" placeholder="Email" value="<?php echo $fetched_row['email'];?>" required></td>
     </tr>
 	<tr>
-    <td><textarea name="hadd" placeholder ="home address" rows ="3" cols="50"><?php echo $fetched_row['hadd'];?></textarea></td>
+    <td><textarea name="hadd" placeholder ="Home Address" rows ="3" cols="50"><?php echo $fetched_row['hadd'];?></textarea></td>
     </tr>
 	<tr>
     <td><input type="radio" name="gender"  <?php if (isset($gender) && $gender=="female") echo $fetched_row['gender']; ?> value="female">Female
