@@ -132,6 +132,9 @@ label{
 	font-size: 20px;
 }
 	
+.labels{
+	color: #82192c;
+}
 	</style>
 </head>
 <body>
@@ -198,16 +201,14 @@ function delete_id(id)
     <tr>
     <th colspan="9"><a href="add_data.php">Click here to add data</a></th>
     </tr>
-	<div class="label">
-    <th>NAME</th>
-    <th>NICKNAME</th>
-    <th>EMAIL</th>
-	<th>HOME ADDRESS</th>
-	<th>GENDER</th>
-	<th>CELL PHONE</th>
-	<th>COMMENTS</th>
-    <th colspan="2">OPERATIONS</th>
-	</div>
+    <th class="labels">NAME</th>
+    <th class="labels">NICKNAME</th>
+    <th class="labels">EMAIL</th>
+	<th class="labels">HOME ADDRESS</th>
+	<th class="labels">GENDER</th>
+	<th class="labels">CELL PHONE</th>
+	<th class="labels">COMMENTS</th>
+    <th class="labels" colspan="2">OPERATIONS</th>
     </tr>
     <?php
  $sql_query="SELECT * FROM users";
