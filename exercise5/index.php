@@ -135,6 +135,10 @@ label{
 .labels{
 	color: #82192c;
 }
+
+.addhere{
+	color: navy;
+}
 	</style>
 </head>
 <body>
@@ -199,7 +203,7 @@ function delete_id(id)
  
     <table align="center">
     <tr>
-    <th colspan="9"><a href="add_data.php">Click here to add data</a></th>
+    <th colspan="9"><a href="add_data.php" class="addhere">Click here to add data</a></th>
     </tr>
     <th class="labels">NAME</th>
     <th class="labels">NICKNAME</th>
