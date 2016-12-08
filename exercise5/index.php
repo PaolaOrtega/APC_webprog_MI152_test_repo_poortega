@@ -137,7 +137,11 @@ label{
 }
 
 .addhere{
-	color: navy;
+	color: #211f3c;
+}
+
+td{
+	color: #211f3c;
 }
 	</style>
 </head>
