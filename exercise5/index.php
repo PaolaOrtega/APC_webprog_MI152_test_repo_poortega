@@ -196,7 +196,7 @@ function delete_id(id)
  
     <table align="center">
     <tr>
-    <th colspan="9"><a href="add_data.php">Add Data Here</a></th>
+    <th colspan="9"><a href="add_data.php">Click here to add data</a></th>
     </tr>
     <th>Name</th>
     <th>Nickname</th>
