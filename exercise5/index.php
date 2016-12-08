@@ -198,14 +198,16 @@ function delete_id(id)
     <tr>
     <th colspan="9"><a href="add_data.php">Click here to add data</a></th>
     </tr>
-    <th>Name</th>
-    <th>Nickname</th>
-    <th>Email</th>
-	<th>Home Address</th>
-	<th>Gender</th>
-	<th>Cell Phone</th>
-	<th>Comments</th>
-    <th colspan="2">Operations</th>
+	<div class="label">
+    <th>NAME</th>
+    <th>NICKNAME</th>
+    <th>EMAIL</th>
+	<th>HOME ADDRESS</th>
+	<th>GENDER</th>
+	<th>CELL PHONE</th>
+	<th>COMMENTS</th>
+    <th colspan="2">OPERATIONS</th>
+	</div>
     </tr>
     <?php
  $sql_query="SELECT * FROM users";
