@@ -239,7 +239,7 @@ if(isset($_POST['btn-cancel']))
     <td><input type="text" name="name" placeholder="Name" value="<?php echo $fetched_row['name']; ?>" required/></td>
     </tr>
     <tr>
-    <td><input type="text" name="nickname" placeholder="Nickkame" value="<?php echo $fetched_row['nickname'];?>"required/></td>
+    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $fetched_row['nickname'];?>"required/></td>
     </tr>
     <tr>
     <td><input type="text" name="email" placeholder="Email" value="<?php echo $fetched_row['email'];?>" required></td>
