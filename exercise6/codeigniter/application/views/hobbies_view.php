@@ -140,8 +140,8 @@ body{
 	<div id="navdiv">
 		
 		<ul>
-			<h1 style="font-family:Source Sans Pro Light;"><a href="mypage.php">Paola Ortega</h1></a></li>
-			<li><a href="mypage.php">Home</a></li>
+			<h1 style="font-family:Source Sans Pro Light;"><a href="<?php echo base_url('index.php/user/controller/mypage')?>"target="_self"">Paola Ortega</h1></a></li>
+			<li><a href="<?php echo base_url('index.php/user/controller/mypage')?>"target="_self"">Home</a></li>
 			<li><a href="hobbies.php">Hobbies</a></li>
 			<li><a href="interests.php">Interests</a></li>
 			<li><a href="trivias.php">Trivia</a></li>
