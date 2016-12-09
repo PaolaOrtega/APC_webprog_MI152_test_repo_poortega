@@ -101,12 +101,13 @@ body{
 	<div id="navdiv">
 		
 		<ul>
-			<h1 style="font-family:Source Sans Pro Light;"><a href="mypage.php">Paola Ortega</h1></a></li>
-			<li><a href="mypage.php">Home</a></li>
-			<li><a href="hobbies.php">Hobbies</a></li>
-			<li><a href="interests.php">Interests</a></li>
-			<li><a href="trivias.php">Trivia</a></li>
-			<li><a href="add_data.php">Feedback</a></li>
+			<h1 style="font-family:Source Sans Pro Light;"><a href="<?php echo base_url('index.php/user/controller/mypage')?>"target="_self">Paola Ortega</h1></a></li>
+			<li><a href="<?php echo base_url('index.php/user/controller/mypage')?>"target="_self"">Home</a></li>
+			<li><a href="<?php echo base_url('index.php/user_controller/hobbies')?>" target="_self">Hobbies</a></li>
+			<li><a href="<?php echo base_url('index.php/user_controller/interests')?>" target="_self">Interests</a></li>
+			<li><a href="<?php echo base_url('index.php/user_controller/trivias')?>" target="_self">Trivia</a></li>
+			<li><a href="<?php echo site_url('users'); ?>">Feedback</a></li>
+			<li><a href="<?php echo site_url('users/create'); ?>">Add User</a></li>
 		</ul>
 	</div>
 </div>
