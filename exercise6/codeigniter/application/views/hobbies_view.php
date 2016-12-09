@@ -143,7 +143,7 @@ body{
 			<h1 style="font-family:Source Sans Pro Light;"><a href="<?php echo base_url('index.php/user/controller/mypage')?>"target="_self">Paola Ortega</h1></a></li>
 			<li><a href="<?php echo base_url('index.php/user/controller/mypage')?>"target="_self"">Home</a></li>
 			<li><a href="<?php echo base_url('index.php/user_controller/hobbies')?>" target="_self">Hobbies</a></li>
-			<li><a href="interests.php">Interests</a></li>
+			<li><a href="<?php echo base_url('index.php/user_controller/interests')?>" target="_self">Interests</a></li>
 			<li><a href="trivias.php">Trivia</a></li>
 			<li><a href="add_data.php">Feedback</a></li>
 		</ul>
