@@ -161,7 +161,7 @@
 	<small>matters or things that are very<br> unimportant, inconsequential, or<br> nonessential; trifles;<br> trivialities.</small></p></font>
 	
 	<div class="next">
-		<a href="mytrivias.php"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		<a href="<?php echo base_url('index.php/user_controller/mytrivias')?>" target="_self"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	</div>
 </div>
 	
