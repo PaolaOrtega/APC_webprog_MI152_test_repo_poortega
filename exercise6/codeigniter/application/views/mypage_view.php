@@ -74,7 +74,7 @@ p {
 	</div>
 	
 	<div class="anchor-icon">
-		<a href="information.php"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+		<a href="<?php echo base_url('index.php/user_controller/information')?>" target="_self"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
 	</div>
 </body>
 
