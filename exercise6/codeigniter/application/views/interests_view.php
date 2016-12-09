@@ -163,7 +163,7 @@ body{
 	<small>the feeling of a person whose<br> attention, concern, or curiosity<br> is particularly engaged<br> by something.</small></p></font>
 	
 	<div class="next">
-		<a href="myinterests.php"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		<a href="<?php echo base_url('index.php/user_controller/myinterests')?>" target="_self"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	</div>
 </div>
 	
