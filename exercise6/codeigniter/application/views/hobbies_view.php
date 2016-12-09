@@ -162,7 +162,7 @@ body{
 	<small>an activity or interest pursued<br> for pleasure or relaxation<br> and as not as a main<br> occupation.</small></p></font>
 	
 	<div class="next">
-		<a href="myhobbies.php"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		<a href="<?php echo base_url('index.php/user_controller/myhobbies')?>" target="_self"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	</div>
 </div>
 	
