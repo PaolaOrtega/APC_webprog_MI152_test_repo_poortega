@@ -146,6 +146,7 @@ body{
 			<li><a href="<?php echo base_url('index.php/user_controller/interests')?>" target="_self">Interests</a></li>
 			<li><a href="<?php echo base_url('index.php/user_controller/trivias')?>" target="_self">Trivia</a></li>
 			<li><a href="<?php echo site_url('users'); ?>">Feedback</a></li>
+			<li><a href="<?php echo site_url('users/create'); ?>">Add User</a></li>
 		</ul>
 	</div>
 </div>
